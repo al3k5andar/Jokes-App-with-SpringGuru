@@ -2,6 +2,8 @@ package com.am.jokesapp.controllers;
 
 import com.am.jokesapp.services.JokeService;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class JokesController {
@@ -12,4 +14,9 @@ public class JokesController {
         this.jokeService = jokeService;
     }
 
+    @GetMapping(path = {"/",""})
+    public String getJokes(Model model){
+
+        return null;
+    }
 }
